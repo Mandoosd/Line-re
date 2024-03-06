@@ -34,8 +34,26 @@
                 </ul>
             </nav>
             <div class="language">
-                <a href="/"><i class="xi-translate"></i></a>
-                <span><a href="">KR<i class="xi-angle-down"></i></a></span>
+                <button></button>
+                <div class="lnk">
+                    <select name="lnk" id="lnk">
+                        <option value="">
+                            LANG
+                        </option>
+                        <option value="http://naver.com">KR</option>
+                        <option value="http://naver.com">EN</option>
+                        <option value="http://naver.com">JP</option>
+                    </select>
+                    <script>
+                        $(function () {
+                            $('#lnk').on('change', function () {
+                                //console.log($(this).val());
+                                let lnk = $(this).val();
+                                lnk && window.open(lnk);
+                            })
+                        })
+                    </script>
+                </div>
             </div>
         </div>
     </header>
@@ -222,8 +240,8 @@
                 </div>
             </div>
         </section>
-        <section class="slogan default">
-            <div class="slogan_wrap inner">
+        <section class="slogan ">
+            <div class="slogan_wrap">
                 <div class="slogan_box">
                     <h2 class="blind"></h2>
                     <figure><img src="./images/LOGO01.png" alt=""></figure>
